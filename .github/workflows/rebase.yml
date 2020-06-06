@@ -6,10 +6,13 @@ name: Automatic Rebase
 jobs:
   rebase:
     name: Rebase
-    if: github.event.issue.pull_request != '' && contains(github.event.pull_request.labels, 'needs-rebase')
+    # if: github.event.issue.pull_request != '' && contains(github.event.pull_request.labels, 'needs-rebase')
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug Action
+        uses: hmarr/debug-action@v1.0.0
+
       - uses: actions/checkout@v1
 
       - name: Automatic Rebase
