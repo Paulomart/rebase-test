@@ -16,6 +16,6 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Automatic Rebase
-        uses: Paulomart/rebase@test
+        uses: Paulomart/rebase@feature/labels
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TKN }}
